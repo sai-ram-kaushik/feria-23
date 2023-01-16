@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
-        sticky ? "bg-black text-white" : "text-white"
+        sticky ? "bg-black text-white" : "text-gray-900"
       }`}
     >
       <div className="flex item-center justify-between">
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div
           className={` ${
             sticky ? "md:bg-white/0 bg-white text-white" : "bg-white"
-          } text-gray-900 md:block hidden px-7 py-2 font-medium rounded-bl-full`}
+          } md:block hidden px-7 py-2 font-medium rounded-bl-full`}
         >
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (

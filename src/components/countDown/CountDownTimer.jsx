@@ -23,7 +23,7 @@ const CountDownTimer = ({countDownTimestampMs}) => {
   }
 
   return (
-    <div className="w-full h-[50vh] m-0 p-0 flex items-center justify-center">
+    <div className="w-full h-[20vh] m-0 p-0 flex items-center justify-center">
       <div className="w-[600px] h-[100px] border-2 border-black text-3xl flex justify-center items-center flex-wrap gap-2">
         <span>{remainingTime.days}</span>
         <span>days</span>

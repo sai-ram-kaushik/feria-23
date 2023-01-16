@@ -12,7 +12,7 @@ const Events = () => {
         <h3 className="text-4xl font-semibold " data-aos="fade-right">
           About <span className="text-cyan-600">Events</span>
         </h3>
-        <div className="flex md:flex-row flex-col-reverse item-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
+        <div className="flex md:flex-row flex-col-reverse item-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto mt-4">
           <div>
             <div
               className="text-gray-300 my-3 flex flex-col"

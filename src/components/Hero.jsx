@@ -8,8 +8,8 @@ const Hero = () => {
     >
       <div className="flex-1 p-14">
         <div className="md:text-left text-center mt-5 flex flex-col">
-          <h1 className="md:text-8xl text-2xl md:leading-normal leading-10 text-white font-bold">
-            Feria-<span className="text-[#de0650]">2023</span>
+          <h1 className="md:text-8xl text-2xl md:leading-normal leading-10 text-white font-bold font-playfair">
+            FERIA-<span className="text-[#de0650] font-sans">2023</span>
           </h1>
           <p className="text-white text-xl">
             <b>Feria</b> is IHE's annual cultural festival organized by the Students'
