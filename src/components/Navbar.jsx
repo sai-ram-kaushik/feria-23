@@ -8,7 +8,6 @@ const Navbar = () => {
     { name: "HOME", link: "#home" },
     { name: "EVENTS", link: "#events" },
     { name: "TICKETS", link: "#tickets" },
-    { name: "CONTACT US", link: "#contact_us" },
   ];
   useEffect(() => {
     window.addEventListener("scroll", () => {

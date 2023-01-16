@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import hero from "../assets/images/hero.png";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 const Hero = () => {
+
+  useEffect(() =>{
+    Aos.init({duration: 1000});
+  }, []);
+
   return (
     <section
       id="home"
-      className="min-h-screen flex py-10 md:flex-row flex-col items-center"
+      className="min-h-screen flex py-10 md:flex-row flex-col items-center" data-aos="fade-right"
     >
       <div className="flex-1 p-14">
         <div className="md:text-left text-center mt-5 flex flex-col">
@@ -21,6 +28,7 @@ const Hero = () => {
             people. The last few years have been monumental for the Students'
             Union of the Institute and students from other colleges.
           </p>
+          <p className="text-white mt-8 font-bold text-5xl font-anton">2<sup className="text-[#de0650]">nd</sup> - 3<sup className="text-[#de0650]">rd</sup> Feb<span className="text-[#de0650]">,</span> 2023</p>
         </div>
       </div>
 

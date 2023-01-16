@@ -1,6 +1,5 @@
 import React from "react";
 import { BiPhoneCall } from "react-icons/bi";
-import { AiOutlineMail } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 const Footer = () => {
   const contact = [
@@ -11,12 +10,12 @@ const Footer = () => {
       icons: <BiPhoneCall />,
     },
     {
-      title: "Email Support",
-      name: "Sagarika sharma",
-      details: "aiccit2023@gmail.com",
-      icons: <AiOutlineMail />,
+      title: "Call Support",
+      name: "Ankita halder",
+      details: "+91 8799772996",
+      icons: <BiPhoneCall />,
     },
-    { name: "Location", details: "MRIIRS Campus", icons: <GoLocation /> },
+    { name: "Location", details: "IHE Delhi University", icons: <GoLocation /> },
   ];
   return (
     <div className="w-full bg-[#1B1464] mt-14 p-3">
@@ -38,7 +37,7 @@ const Footer = () => {
         ))}
       </div>
       <p className="text-white flex text-center items-center justify-center mt-8">
-        Copyright &#169; AICCIT - 2023. All Rights Reserved
+        Copyright &#169; Feria - 2023. All Rights Reserved
       </p>
     </div>
   );
