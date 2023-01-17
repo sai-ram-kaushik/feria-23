@@ -5,13 +5,13 @@ const Footer = () => {
   const contact = [
     {
       title: "Call Support",
-      name: "Sagarika sharma",
+      name: "Sagarika Sharma",
       details: "+91 7042087737",
       icons: <BiPhoneCall />,
     },
     {
       title: "Call Support",
-      name: "Ankita halder",
+      name: "Ankita Halder",
       details: "+91 8799772996",
       icons: <BiPhoneCall />,
     },

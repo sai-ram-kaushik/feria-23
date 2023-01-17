@@ -7,3 +7,39 @@
 body{
     background-color: #00091a;
 }
+
+.clock{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    height: 180px;
+    width: 400px;
+}
+
+.clock section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.clock span{
+    font-size: 30px;
+}
+
+.clock section p{
+    color: #de0650;
+    font-weight: bold;
+    text-shadow: none;
+    font-size: 35px;
+}
+
+.clock section small{
+    color: silver;
+    text-shadow: none;
+    font-size: 20px;
+}

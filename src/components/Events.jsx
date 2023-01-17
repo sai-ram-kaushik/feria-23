@@ -1,8 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import CountDownTimer from "./countDown/CountDownTimer";
+import about_img from "../assets/images/about_img.png";
+import Clock from "./Clock";
 const Events = () => {
+
+  const [timerDays, setTimerDays] = useState();
+  const [timerHour, setTimerHour] = useState();
+  const [timerMin, setTimerMin] = useState();
+  const [timerSec, setTimerSec] = useState();
+
+  let interval;
+
+  const startTimer = () =>{
+    const countDownDate = new Date("Feb 2, 2023").getTime();
+
+    interval = setInterval(() =>{
+      const now = new Date().getTime();
+
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
+      const hour = Math.floor(distance % (24 * 60 * 60 * 1000) / (1000*60*60));
+      const minutes = Math.floor(distance % (60 * 60 * 1000) / (1000 * 60));
+      const seconds = Math.floor(distance % (60 * 1000) / (1000));
+
+      if(distance < 0){
+        clearInterval(interval.current)
+      }
+      else{
+        setTimerDays(days);
+        setTimerHour(hour);
+        setTimerMin(minutes);
+        setTimerSec(seconds);
+      }
+    })
+
+  }
+
+  useEffect(() =>{
+    startTimer();
+  })
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -12,12 +51,23 @@ const Events = () => {
         <h3 className="text-4xl font-semibold " data-aos="fade-right">
           About <span className="text-cyan-600">Events</span>
         </h3>
-        <div className="flex md:flex-row flex-col-reverse item-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto mt-4">
-          <div>
+
+        <div className="flex md:flex-row flex-col-reverse item-center mt-10 md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
+          <div className="flex-1 flex justify-center items-center">
             <div
-              className="text-gray-300 my-3 flex flex-col"
-              data-aos="fade-left"
+              className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm flex items-center"
+              data-aos="fade-down"
             >
+              <img
+                src={about_img}
+                alt="about_image"
+                className="w-full"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div className="text-gray-300 my-3 flex flex-col">
               <p
                 className="text-justify leading-8 font-sans"
                 data-aos="fade-right"
@@ -32,14 +82,9 @@ const Events = () => {
                 have been monumental for the Students' Union of the Institute
                 and students from other colleges.
               </p>
-              <p className="text-[#de0650] text-3xl mt-8 font-bold">
-                2-3 Feb, 2023
-              </p>
-              <p className="text-white text-3xl mt-8 font-bold">
-                Doors Open from 11am - 9pm | Live at IHE College, DU
-              </p>
-              <div className="mt-2">
-                <CountDownTimer countDownTimestampMs={143568600000}/>
+              <p className="font-bold text-3xl mt-6">Doors open from 11am - 9pm | Live at IHE College, DU</p>
+              <div>
+                  <Clock timerDays={timerDays} timerHour={timerHour} timerMin={timerMin} timerSec={timerSec} />
               </div>
             </div>
           </div>
