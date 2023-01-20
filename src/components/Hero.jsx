@@ -28,7 +28,7 @@ const Hero = () => {
             people. The last few years have been monumental for the Students'
             Union of the Institute and students from other colleges.
           </p>
-          <p className="text-white mt-8 font-bold text-5xl font-anton">2<sup className="text-[#de0650]">nd</sup> - 3<sup className="text-[#de0650]">rd</sup> Feb<span className="text-[#de0650]">,</span> 2023</p>
+          <p className="text-white mt-8 font-bold text-5xl font-anton">9<sup className="text-[#de0650]">th</sup> - 10<sup className="text-[#de0650]">th</sup> Feb<span className="text-[#de0650]">,</span> 2023</p>
         </div>
       </div>
 

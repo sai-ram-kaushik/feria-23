@@ -13,7 +13,7 @@ const Events = () => {
   let interval;
 
   const startTimer = () =>{
-    const countDownDate = new Date("Feb 2, 2023").getTime();
+    const countDownDate = new Date("Feb 9, 2023").getTime();
 
     interval = setInterval(() =>{
       const now = new Date().getTime();

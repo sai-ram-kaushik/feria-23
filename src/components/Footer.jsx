@@ -9,7 +9,7 @@ const Footer = () => {
       details: "+91 7042087737",
       icons: <BiPhoneCall />,
     },
-    {
+    { 
       title: "Call Support",
       name: "Ankita Halder",
       details: "+91 8799772996",
